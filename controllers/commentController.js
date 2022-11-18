@@ -11,6 +11,5 @@ exports.postComment = async function(req, res) {
     .then(async () => {
       const findBook = await Book.find({ _id: book_id }).populate('temp');
       res.status(200).json(findBook[0]);
-      // return;
     });
 }
