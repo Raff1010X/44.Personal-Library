@@ -4,8 +4,6 @@
 
 Working example: https://app-personal-library.herokuapp.com/
 
-Working example: https://44Personal-Library.raffraff1.repl.co
-
 My git repo: https://github.com/Raff1010X/01.Roadmap
 
 <p align="center">
