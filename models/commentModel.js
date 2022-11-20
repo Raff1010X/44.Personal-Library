@@ -11,14 +11,4 @@ const commentSchema = new mongoose.Schema({
     },
 });
 
-commentSchema.set('toJSON', {
-    virtuals: true,
-    transform: (doc, ret, options) => {
-        delete ret.__v;
-        delete ret.id;
-        delete ret._id;
-        delete ret.book_id;
-    },
-});
-
 module.exports = mongoose.model('Comment', commentSchema);

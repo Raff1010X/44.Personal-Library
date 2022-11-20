@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const Comment = require('./commentModel')
 
 //+ Schema for book model
 const bookSchema = new mongoose.Schema(
@@ -17,14 +18,9 @@ bookSchema.virtual('commentcount', {
   count: true // And only get the number of docs
 });
 
-bookSchema.virtual('temp', {
-    ref: 'Comment',
-    localField: '_id',
-    foreignField: 'book_id',
-});
-
-bookSchema.virtual('comments').get(function() {
-    if (this.temp) return this.temp.map((el) => {return el.comment});
+bookSchema.virtual('comments').get(async function() {
+    const comments = await Comment.find({book_id: this._id});
+    return comments.map((el) => {return el.comment});
 });
 
 bookSchema.set('toJSON', {

@@ -25,7 +25,7 @@ exports.deleteBooks = function(req, res) {
 }
 
 exports.getBook = async function(req, res) {
-  const findBook = await Book.find({ _id: req.params.id }).select('-commentcount').populate('temp');
+  const findBook = await Book.find({ _id: req.params.id }).select('-commentcount');
   if (findBook.length > 0) res.status(200).json(findBook[0]);
   else res.status(200).send('no book exists');
 }
