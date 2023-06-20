@@ -2,7 +2,7 @@
 
 ## [Personal Library](https://www.freecodecamp.org/learn/quality-assurance/quality-assurance-projects/personal-library)
 
-Working example: https://app-personal-library.herokuapp.com/
+Working example: https://app-personal-library.webdev.priv.pl/
 
 My git repo: https://github.com/Raff1010X/01.Roadmap
 
